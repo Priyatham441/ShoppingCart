@@ -1,0 +1,10 @@
+package com.shoppingcart.model;
+
+public class Product {
+
+	private long productId;
+	private String productName;
+	private double productPrice;
+	private String productDescription;
+	
+}

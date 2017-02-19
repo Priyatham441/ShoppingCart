@@ -23,7 +23,6 @@ INDEX VERSION 1.129+E:\Priyatham\Repositories\ShoppingCart\.metadata\.plugins\or
 1075794691.index
 4184201189.index
 414978335.index
-3435007717.index
 2855899100.index
 1852701627.index
 3641574936.index
