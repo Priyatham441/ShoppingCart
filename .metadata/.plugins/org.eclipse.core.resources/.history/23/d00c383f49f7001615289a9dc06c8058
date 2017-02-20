@@ -1,0 +1,20 @@
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Crow crow = new Crow();
+		Hen hen = new Hen();
+		
+		testFly(crow);
+		testFly(hen);
+		
+	}
+
+	
+	public static void testFly(Bird bird){
+		bird.fly();
+	}
+}
+
+

@@ -1,0 +1,8 @@
+import java.util.*;
+
+public abstract class Bird {
+  public abstract void fly();
+  public void queek(){  
+	  System.out.println("queek");
+  }
+}

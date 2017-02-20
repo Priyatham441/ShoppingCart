@@ -1,0 +1,17 @@
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Crow crow = new Crow();
+		Hen hen = new Hen();
+		
+	}
+
+	
+	public static void testFly(Bird bird){
+		bird.fly();
+	}
+}
+
+

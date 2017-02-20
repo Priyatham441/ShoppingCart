@@ -1,0 +1,57 @@
+import java.util.*;
+public class Elevator {
+
+	//Consider an elevator can take maximum of X people and Y total weight at a time
+	//and consider there are a total of M floors
+	//Provided A[] array with weights of people and B[] array with floors to go
+	//Both A[] and B[] are of equal length
+	//Write a function that returns the number of times an elevator would stop to transport all members in array
+	//Consider ground floor is also a stop
+	//The function should should be written with complexity of O[n]
+	
+	public static void main(String[] args) {
+		
+		int[] A ={60,80,40,40,30,80};
+		int[] B ={3,2,2,1,4,5};
+		CountStops(A,B,5,2,140);
+
+	}
+	
+	public static int CountStops(int[] A, int[] B, int M, int X, int Y){
+		//A[] weights
+		//B[] floors to go
+		//M - maximum floor
+		//X - maximum members
+		//Y - maximum total weight
+		
+		int totalStops =0;
+		int tripMemebers =0;
+		int tripWeight =0;
+		ArrayList<Integer> tripDistinctStops = ArrayList<Integer>();
+		for(int i=0;i<A.length;i++){
+			
+			//Checking the total people and their weight
+			if(tripMemebers+1<=X && tripWeight+A[i] <= Y){
+				
+				//Incrementing the trip people and count 
+				tripMemebers++;
+				tripWeight+= A[i];
+				if(!tripDistinctStops.contains(B[i]))
+				{
+					//Adding distinct stops to the trip array
+					tripDistinctStops.add(B[i]);
+				}
+				
+			}else{ //Exceeded trip size or weight and completed trip
+				
+				tripMemebers =0;
+				tripWeight =0;
+				totalStops += tripDistinctStops.size() + 1; //For the ground stop
+				tripDistinctStops.clear();
+			}
+		}
+		totalStops += tripDistinctStops.size() + 1; //for the last trip
+		return totalstops;
+	}
+
+}
