@@ -1,0 +1,22 @@
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Crow crow = new Crow();
+		crow.fly();
+		crow.queek();
+		
+		Bird bird = new Crow();
+		
+		bird.fly();
+
+	}
+
+	
+	public static void testFly(Bird bird){
+		bird.fly();
+	}
+}
+
+
